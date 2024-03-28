@@ -1,6 +1,6 @@
 # Maintainer: jmcb <joelsgp@protonmail.com>
-pkgname=altirra
-pkgver=4.20
+pkgname='altirra'
+pkgver='4.20'
 pkgrel=1
 pkgdesc='An 8-bit Atari computer emulator, on Wine'
 arch=('any')
