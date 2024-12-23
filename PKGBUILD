@@ -1,6 +1,6 @@
 # Maintainer: jmcb <joelsgp@protonmail.com>
 pkgname='altirra'
-pkgver='4.21'
+pkgver='4.30'
 pkgrel=1
 pkgdesc='An 8-bit Atari computer emulator, on Wine'
 arch=('any')
@@ -16,7 +16,7 @@ source=("https://www.virtualdub.org/downloads/Altirra-$pkgver.zip"
         'altirra.desktop'
         'altirra.png'
         'application-altirra.xml')
-sha256sums=('c5965184cf5b43d6bd30af32ec64373363f4597b028de5c8fb30238865bf6427'
+sha256sums=('cc19125800bea267d6f22dfc2be864fcf1d3bc45dc52a1b2d9b7787fea0e71f5'
             'f6bebc7d367d59dd1789fd17450c9a4eb329c27a5b5345f42d4854f412a45221'
             'c6aab8083ed7e68c82ffc5b74497a87610f5f11a218ec42fe67fcf827d5a62c0'
             '713b375c8467da838f4c4c9f1eca2a947aecc6c429161bc67eeedecc7c81b620'
