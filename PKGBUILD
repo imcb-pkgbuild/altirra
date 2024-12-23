@@ -1,4 +1,4 @@
-# Maintainer: jmcb <joelsgp@protonmail.com>
+# Maintainer: imcb <irismessage@protonmail.com>
 pkgname='altirra'
 pkgver='4.30'
 pkgrel=1
