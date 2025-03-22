@@ -27,7 +27,7 @@ sha256sums_aarch64=('1ed494ba1fb7e55e5f117c23e14db43f7e734036bc43905f76a4dbe8e12
 
 package() {
     _dest="${pkgdir}/opt/${pkgname}"
-    _share="${pkgdir}"/usr/share
+    _share="${pkgdir}/usr/share"
     _bin="${pkgdir}/usr/bin"
 
     _exe_dest='Altirra64.exe'
@@ -45,18 +45,18 @@ package() {
     install -D -m644 "${_exe}" "${_dest}/${_exe_dest}"
     # windows program files
     # omits extras/
-    install -D -m644 -t "${_dest}"/ Additions.atr Altirra.chm
+    install -D -m644 -t "${_dest}" 'Additions.atr' 'Altirra.chm'
 
     # shell script
-    install -D -t "${_dest}" altirra
+    install -D -t "${_dest}" 'altirra'
     # firmware roms
-    mv atari5200.rom 5200.ROM
-    install -D -m644 -t "${_dest}/roms/" 5200.ROM ATARIBAS.ROM ATARIOSB.ROM ATARIXL.ROM
+    mv 'atari5200.rom' '5200.ROM'
+    install -D -m644 -t "${_dest}/roms/" '5200.ROM' 'ATARIBAS.ROM' 'ATARIOSB.ROM' 'ATARIXL.ROM'
     # desktop entry
-    install -D -m644 -t "${_share}/applications" ${pkgname}.desktop
-    install -D -m644 -t "${_share}/pixmaps" ${pkgname}.png
-    install -D -m644 -t "${_share}/mime/packages" application-${pkgname}.xml
+    install -D -m644 -t "${_share}/applications" "${pkgname}.desktop"
+    install -D -m644 -t "${_share}/pixmaps" "${pkgname}.png"
+    install -D -m644 -t "${_share}/mime/packages" "application-${pkgname}.xml"
     # PATH symlink
     install -d "${_bin}"
-    ln -s /opt/${pkgname}/${pkgname} "${_bin}/${pkgname}"
+    ln -s "/opt/${pkgname}/${pkgname}" "${_bin}/${pkgname}"
 }
