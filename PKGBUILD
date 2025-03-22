@@ -1,27 +1,29 @@
 # Maintainer: imcb <irismessage@protonmail.com>
 pkgname='altirra'
 pkgver='4.30'
-pkgrel=1
+pkgrel=2
 pkgdesc='An 8-bit Atari computer emulator, on Wine'
-arch=('any')
+arch=('x86_64' 'aarch64')
 url='https://www.virtualdub.org/altirra.html'
 license=('GPL2')
 depends=('wine'
          'wine-mono')
 optdepends=('wine-gecko: HTML help pages support')
 provides=('altirra')
-source=("https://www.virtualdub.org/downloads/Altirra-$pkgver.zip"
-        'http://atari.vjetnam.cz/dow/emuROMs.zip'
+source=('http://atari.vjetnam.cz/dow/emuROMs.zip'
         'altirra'
         'altirra.desktop'
         'altirra.png'
         'application-altirra.xml')
-sha256sums=('cc19125800bea267d6f22dfc2be864fcf1d3bc45dc52a1b2d9b7787fea0e71f5'
-            'f6bebc7d367d59dd1789fd17450c9a4eb329c27a5b5345f42d4854f412a45221'
+source_x86_64=("https://www.virtualdub.org/downloads/Altirra-${pkgver}.zip")
+source_aarch64=("https://www.virtualdub.org/downloads/Altirra-${pkgver}-ARM64.zip")
+sha256sums=('f6bebc7d367d59dd1789fd17450c9a4eb329c27a5b5345f42d4854f412a45221'
             'c6aab8083ed7e68c82ffc5b74497a87610f5f11a218ec42fe67fcf827d5a62c0'
             '713b375c8467da838f4c4c9f1eca2a947aecc6c429161bc67eeedecc7c81b620'
             '5319fd88751fa886683d955976ed74eb266e9ea462ae77431b6a6c457ce42dc1'
             'cd3a40e290d999912767a70ffc8e4185019290251b350f887f4a2fa972b6c96b')
+sha256sums_x86_64=('cc19125800bea267d6f22dfc2be864fcf1d3bc45dc52a1b2d9b7787fea0e71f5')
+sha256sums_aarch64=('1ed494ba1fb7e55e5f117c23e14db43f7e734036bc43905f76a4dbe8e12efa63')
 
 package() {
     _dest="${pkgdir}/opt/${pkgname}"
