@@ -30,9 +30,23 @@ package() {
     _share="${pkgdir}"/usr/share
     _bin="${pkgdir}/usr/bin"
 
+    _exe_dest='Altirra64.exe'
+    local _exe
+    case $CARCH in
+        'x86_64')
+        _exe='Altirra64.exe'
+        ;;
+        'aarch64')
+        _exe='AltirraARM64.exe'
+        ;;
+    esac
+
+    # windows executable
+    install -D -m644 "${_exe}" "${_dest}/${_exe_dest}"
     # windows program files
     # omits extras/
-    install -D -m644 -t "${_dest}"/ Additions.atr Altirra.chm Altirra64.exe
+    install -D -m644 -t "${_dest}"/ Additions.atr Altirra.chm
+
     # shell script
     install -D -t "${_dest}" altirra
     # firmware roms
